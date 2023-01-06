@@ -4,8 +4,14 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Select from "react-select";
+
 
 const Register = () => {
+  const options=[
+    {value:'Active',label:'Active'},
+    {value:'Inactive',label:'Inactive'}
+];
   return (
     <>
       <div className="container">
@@ -50,6 +56,11 @@ const Register = () => {
                   name="gender"
                   value={"Female"}
                  />
+              </Form.Group>
+              <Form.Group className="mb-3 col-lg-5" controlId="formBasicEmail">
+                <Form.Label>Select your Gender </Form.Label>
+                 <Select
+                 options={options} />
 
               </Form.Group>
 
